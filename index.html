@@ -7,25 +7,26 @@
     <link rel="icon" href="images/icon.ico" type="image/x-icon" />
     <script src="js/data/amsterdam.js" defer></script>
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <script>
       console.log(amsterdam);
     </script>
   </head>
   <body>
-    <header>
-      <nav>
-        <p>user name</p>
-      <input type="button" value="Sign Out" id="SingOut"/>
-        <div>  
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="rent.html">RENT</a></li>
-            <li><a href="mybookings.html">MY BOOKINGS</a></li>
-            <li><a href="favorites.html">FAVORITES</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+<header>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="rent.html">Rent</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="mybookings.html">My Bookings</a>
+    </div>
+    <div class="nav-right">
+      <span id="userName">Guest</span>
+      <button id="SignOut">Sign Out</button>
+    </div>
+  </nav>
+</header>
     <section>
       <h1>HOME</h1>
       <div>
@@ -65,5 +66,6 @@
       <h2>Rental Options</h2>
       
     </section>
+    <script src="js/auth.js" defer></script>
   </body>
 </html>

@@ -1,3 +1,8 @@
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+if (!currentUser) {
+  window.location.href = "login.html";
+}
+
 //  ניהול תהליך השכרה של דירה אחת
 /**
  * פונקציית עזר לבדיקת חפיפה בין שני טווחי תאריכים.
@@ -28,3 +33,4 @@ function checkAvailability(listingId, startDate, endDate) {
   //      - שימוש ב-isDateRangeOverlap להשוואה בין טווחים
   // להחזיר false אם יש חפיפה, true אם פנוי
 }
+
