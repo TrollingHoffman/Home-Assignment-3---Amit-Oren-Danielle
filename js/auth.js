@@ -38,7 +38,9 @@ if (btnGoToLogin) {
 
 // מעבר לעמוד הרשמה
 if (btngoToRegister) {
+      console.log("btn to register found!");
     btngoToRegister.addEventListener('click', function () {
+            console.log("redirecting to register...");
         window.location.href = "register.html";
     });
 }
@@ -103,20 +105,4 @@ if (btnLogin) {
     });
 }
 
-const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-if (currentUser) {
-    const nameP = document.getElementById("userName");
-  if (nameP) {
-    nameP.textContent = currentUser.name;
-  }
-} else {
-    window.location.href = "login.html";
-}
 
-const signOutBtn = document.getElementById("SignOut");
-if (signOutBtn) {
-  signOutBtn.addEventListener("click", function () {
-    localStorage.removeItem("currentUser");
-    window.location.href = "login.html";
-  });
-}
